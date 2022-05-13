@@ -1,9 +1,24 @@
 package main
 
-import "github.com/StartOpsTools/Woodpecker/pkg/os"
+import (
+	"fmt"
+	"github.com/StartOpsTools/Woodpecker/pkg/os"
+)
 
 func main() {
 	os.GetOpenFile()
 
-	os.GetDiskInfo()
+	os.OutputCpuInfo()
+
+	fmt.Print("\n\n")
+
+	os.OutputDiskUsageInfo()
+
+	fmt.Print("\n\n")
+
+	os.MemoryInfo()
+
+	os.Connection("all")
+
+	os.Process()
 }
